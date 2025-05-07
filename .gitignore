@@ -1,33 +1,30 @@
-# === Java / Spring Boot 后端 ===
-/backend/target/
+# === 后端 Java / Spring Boot ===
+backend/.idea/
+backend/demo/target/
 *.log
 *.jar
 *.war
 *.class
-*.iml
-*.ipr
-*.iws
-/backend/.idea/
 
-# === Vue 前端项目 ===
-/employee_vue/node_modules/
-/employee_vue/dist/
-/employee_vue/.env
+# === 前端 Vue 项目通用 ===
+employee_vue/node_modules/
+employee_vue/dist/
+employee_vue/.env
 
-/supplier_vue/node_modules/
-/supplier_vue/dist/
-/supplier_vue/.env
+supplier_vue/node_modules/
+supplier_vue/dist/
+supplier_vue/.env
 
-/test418_vue/node_modules/
-/test418_vue/dist/
-/test418_vue/.env
+test418_vue/node_modules/
+test418_vue/dist/
+test418_vue/.env
 
-# === 通用 IDE / 系统文件 ===
+# === IDE 和系统文件 ===
 .vscode/
 .DS_Store
 Thumbs.db
 
-# === 其他不需要上传的文件 ===
+# === 其他可能的缓存/临时文件 ===
 *.zip
 *.tar
 *.rar
