@@ -1,0 +1,33 @@
+# === 后端 Java / Spring Boot ===
+backend/.idea/
+backend/demo/target/
+*.log
+*.jar
+*.war
+*.class
+
+# === 前端 Vue 项目通用 ===
+employee_vue/node_modules/
+employee_vue/dist/
+employee_vue/.env
+
+supplier_vue/node_modules/
+supplier_vue/dist/
+supplier_vue/.env
+
+test418_vue/node_modules/
+test418_vue/dist/
+test418_vue/.env
+
+# === IDE 和系统文件 ===
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === 其他可能的缓存/临时文件 ===
+*.zip
+*.tar
+*.rar
+*.7z
+*.bak
+*.tmp
