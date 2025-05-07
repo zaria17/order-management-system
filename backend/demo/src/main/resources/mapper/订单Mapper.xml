@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.订单Mapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.订单">
+        <id column="订单ID" property="订单id" />
+        <result column="订购日期" property="订购日期" />
+        <result column="发货日期" property="发货日期" />
+        <result column="到货日期" property="到货日期" />
+        <result column="货款确认日期" property="货款确认日期" />
+        <result column="运货费" property="运货费" />
+        <result column="货主名称" property="货主名称" />
+        <result column="货主地址" property="货主地址" />
+        <result column="货主城市" property="货主城市" />
+        <result column="货主地区" property="货主地区" />
+        <result column="货主邮政编码" property="货主邮政编码" />
+        <result column="货主国家" property="货主国家" />
+        <result column="折扣id" property="折扣id" />
+        <result column="货款" property="货款" />
+        <result column="雇员ID" property="雇员id" />
+        <result column="客户ID" property="客户id" />
+        <result column="总金额" property="总金额" />
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        订单ID, 订购日期, 发货日期, 到货日期, 货款确认日期, 运货费, 货主名称, 货主地址, 货主城市, 货主地区, 货主邮政编码, 货主国家, 折扣id, 货款, 雇员ID, 客户ID, 总金额
+    </sql>
+
+    <select id="getNull" resultMap="BaseResultMap">
+        select *
+        from 订单
+        where 雇员id is NULL
+    </select>
+
+
+</mapper>

@@ -1,0 +1,9 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: 123456
+    url: jdbc:sqlserver://localhost:1433;databaseName=Test410
+    username: H
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.产品Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.产品">
+        <id column="产品ID" property="产品id" />
+        <result column="产品名称" property="产品名称" />
+        <result column="单位数量" property="单位数量" />
+        <result column="单价" property="单价" />
+        <result column="库存量" property="库存量" />
+        <result column="中止" property="中止" />
+        <result column="类别ID" property="类别id" />
+        <result column="供应商ID" property="供应商id" />
+        <result column="订购量" property="订购量" />
+        <result column="再订购量" property="再订购量" />
+    </resultMap>
+    <select id="getname" resultMap="BaseResultMap">
+        select 产品名称
+        from 产品
+        where 产品id = #{产品id,jdbcType=INTEGER}
+    </select>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        order by create_time desc
+        产品ID, 产品名称, 单位数量, 单价, 库存量, 中止, 类别ID, 供应商ID, 订购量, 再订购量
+    </sql>
+
+</mapper>

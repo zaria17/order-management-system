@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.雇员Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.雇员">
+        <id column="雇员ID" property="雇员id" />
+        <result column="姓氏" property="姓氏" />
+        <result column="名字" property="名字" />
+        <result column="职务" property="职务" />
+        <result column="尊称" property="尊称" />
+        <result column="出生日期" property="出生日期" />
+        <result column="雇用日期" property="雇用日期" />
+        <result column="地址" property="地址" />
+        <result column="城市" property="城市" />
+        <result column="地区" property="地区" />
+        <result column="邮政编码" property="邮政编码" />
+        <result column="国家" property="国家" />
+        <result column="家庭电话" property="家庭电话" />
+        <result column="照片" property="照片" />
+        <result column="备注" property="备注" />
+    </resultMap>
+
+    <select id="getimage" resultMap="BaseResultMap">
+        select 照片
+        from 雇员
+        where 雇员id = #{雇员id,jdbcType=INTEGER}
+    </select>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        雇员ID, 姓氏, 名字, 职务, 尊称, 出生日期, 雇用日期, 地址, 城市, 地区, 邮政编码, 国家, 家庭电话, 照片, 备注
+    </sql>
+
+</mapper>

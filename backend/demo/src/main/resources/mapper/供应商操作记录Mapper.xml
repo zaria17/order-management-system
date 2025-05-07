@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.供应商操作记录Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.供应商操作记录">
+        <id column="记录ID" property="记录id" />
+        <result column="操作时间" property="操作时间" />
+        <result column="操作类型" property="操作类型" />
+        <result column="供应商ID" property="供应商id" />
+        <result column="公司名称" property="公司名称" />
+        <result column="联系人姓名" property="联系人姓名" />
+        <result column="联系人职务" property="联系人职务" />
+        <result column="地址" property="地址" />
+        <result column="城市" property="城市" />
+        <result column="地区" property="地区" />
+        <result column="邮政编码" property="邮政编码" />
+        <result column="国家" property="国家" />
+        <result column="电话" property="电话" />
+        <result column="操作人" property="操作人" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        记录ID, 操作时间, 操作类型, 供应商ID, 公司名称, 联系人姓名, 联系人职务, 地址, 城市, 地区, 邮政编码, 国家, 电话, 操作人
+    </sql>
+
+</mapper>
